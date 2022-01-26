@@ -14,13 +14,13 @@ https://github.com/ramonvos/rmn-python-api-tests.git
 
 Instalar o venv para criar ambiente virtual
 ```bash
-pip install venv
+pip install virtualenv
 ```
 
 Criar um ambiente virtual
 
 ```bash
-venv _env
+virtualenv _env
 ```
 
 Acessar o ambiente virtual
@@ -32,7 +32,7 @@ _env\Scripts\activate
 Instalar a biblioteca requests
 
 ```bash
-pip install request
+pip install requests
 ```
 
 Instalar a biblioteca pytest
@@ -47,6 +47,12 @@ Instalar a biblioteca jsonpath
 pip install jsonpath
 ```
 
+Instalar a biblioteca Allure
+```bash
+pip install allure-pytest
+```
+
+
 
 ## Execução
 
@@ -56,13 +62,7 @@ Execute o comando abaixo para executar todos os testes
 pytest -s
 ```
 
-## Allure 
-
-Instalar a biblioteca Allure
-```bash
-pip install allure-pytest
-```
-
+## Execução com Allure 
 Executar os testes e gerar arquivos Allure
 ```bash
 pytest -s --alluredir=./temp/AllureResults

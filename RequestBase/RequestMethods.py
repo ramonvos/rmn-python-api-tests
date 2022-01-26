@@ -16,14 +16,14 @@ class Requests():
     def execute_post_request(self,url,requestBody):
         response = requests.post(url, data=requestBody)
         allure.attach(str(response.status_code),name="StatusCode",attachment_type=allure.attachment_type.TEXT)
-        allure.attach(response.text,name="ResponseBody",attachment_type=allure.attachment_type.TEXT)
+        allure.attach(response.text,name="ResponseBody",attachment_type=allure.attachment_type.JSON)
         return response
     
     @allure.step("Execute Put Request")
     def execute_put_request(self,url,requestBody):
         response = requests.put(url, data=requestBody)
         allure.attach(str(response.status_code),name="StatusCode",attachment_type=allure.attachment_type.TEXT)
-        allure.attach(response.text,name="ResponseBody",attachment_type=allure.attachment_type.TEXT)
+        allure.attach(response.text,name="ResponseBody",attachment_type=allure.attachment_type.JSON)
         return response
     
     @allure.step("Execute Delete Request")

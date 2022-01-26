@@ -18,4 +18,4 @@ def test_create_new_user_success():
     validator = Asserts()
     validator.validate_status_code(201, response.status_code)
     validator.validate_response("Ramon", response_body["name"])    
-    validator.validate_response("QA Lead", response_body["job"])     
+    validator.validate_response("QA Automation", response_body["job"])     

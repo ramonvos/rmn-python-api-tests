@@ -20,5 +20,5 @@ def test_update_user_success():
     
     validator = Asserts()
     validator.validate_status_code(200, response.status_code)
-    validator.validate_response("morpheus", response_body["name"])    
-    validator.validate_response("zion resident", response_body["job"])     
+    validator.validate_response("Ramon", response_body["name"])    
+    validator.validate_response("QA Lead", response_body["job"])     

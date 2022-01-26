@@ -20,13 +20,13 @@ pip install venv
 Criar um ambiente virtual
 
 ```bash
-venv apienv
+venv _env
 ```
 
 Acessar o ambiente virtual
 
 ```bash
-apienv\Scripts\activate
+_env\Scripts\activate
 ```
 
 Instalar a biblioteca requests
@@ -54,4 +54,20 @@ Execute o comando abaixo para executar todos os testes
 
 ```bash
 pytest -s
+```
+
+## Allure 
+
+Instalar a biblioteca Allure
+```bash
+pip install allure-pytest
+```
+
+Executar os testes e gerar arquivos Allure
+```bash
+pytest -s --alluredir=./temp/AllureResults
+```
+Executar os testes e gerar arquivos Allure
+```bash
+allure serve ./temp/AllureResults
 ```
